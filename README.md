@@ -4,7 +4,7 @@
 
 ### Purpose
 
-
+Steve has asked for help with an analysis of his stock data. The first project in this module involved determining stock performance by analyzing financial data using Visual Basic for Applications (VBA). Now, he wants to expand the dataset to include the entire stock market over the last few years. In order to make the analysis applicable to the entirety of his stock data, this project will refactor the solution code to loop through all the stock data one time in order to collect the same information done in the initial analysis in this module.
 
 ## Results
 
