@@ -8,7 +8,7 @@ Steve has asked for help with an analysis of his stock data. The first project i
 
 ## Results
 
-
+The entire refactored code I created is shown below, but a detailed explanation of each step after the starter code is provided as well.
 
 ```
 Sub AllStocksAnalysisRefactored()
@@ -131,6 +131,95 @@ Sub AllStocksAnalysisRefactored()
 
 End Sub
 ```
+
+For Step 1a, the tickerIndex is set equal to zero before looping over the rows.
+
+```
+'1a) Create a ticker Index
+tickerIndex = 0
+```
+
+Step 1b shows that arrays are created for tickers, tickerVolumes, tickerStartingPrices, and tickerEndingPrices.
+
+```
+'1b) Create three output arrays
+Dim tickerVolumes(12) As Long
+Dim tickerStartingPrices(12) As Single
+Dim tickerEndingPrices(12) As Single
+```
+
+Step 2a creates loop to initialize the tickerVolumes to zero.
+
+```
+''2a) Create a for loop to initialize the tickerVolumes to zero.
+'If the next row’s ticker doesn’t match, increase the tickerIndex.
+For i = 0 To 11
+tickerVolumes(i) = 0
+tickerStartingPrices(i) = 0
+tickerEndingPrices(i) = 0
+Next i
+```	
+
+Step 2b creates a loop that will loop over all the rows in the spreadsheet.
+
+```
+ ''2b) Loop over all the rows in the spreadsheet.
+  For i = 2 To RowCount
+```
+
+Inside the loop in Step 2b, Step 3a has a script that increases the current tickerVolumes (stock ticker volume) variable and adds the ticker volume for the current stock ticker.
+It uses the tickerIndex variable as the index.
+
+```
+'3a) Increase volume for current ticker
+tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+```
+
+Step 3b is an if-then statement to check if the current row is the first row with the selected tickerIndex. It is, so the current starting price is assigned to the tickerStartingPrices variable.
+
+```
+'3b) Check if the current row is the first row with the selected tickerIndex.
+        If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex) Then
+tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+
+End If
+```
+
+Step 3c is an if-then statement to check if the current row is the last row with the selected tickerIndex. It is, so the current closing price is assigned to  the tickerEndingPrices variable.
+
+```
+'3c) Check if the current row is the last row with the selected ticker
+       If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+End If
+```
+
+Step 3d increases the tickerIndex if the next row’s ticker doesn’t match the previous row’s ticker.
+
+```
+'3d Increase the tickerIndex.
+      If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
+      	tickerIndex = tickerIndex + 1
+End If
+
+Next i
+```
+
+Lastly, Step 4 loops through the arrays (tickers, tickerVolumes, tickerStartingPrices, and tickerEndingPrices) to output the “Ticker,” “Total Daily Volume,” and “Return” columns in the spreadsheet.
+
+```
+'4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
+    For i = 0 To 11
+Worksheets("All Stocks Analysis").Activate
+Cells(4 + i, 1).Value = tickers(i)
+Cells(4 + i, 2).Value = tickerVolumes(i)
+Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
+        
+Next i
+```
+
+The rest of the code formats for readability, which was provided in the starter code as well.
+
 
 
 ![VBA_Challenge_2017](https://user-images.githubusercontent.com/90656004/137662971-2bf4c4a5-598c-4845-8413-6166c4973371.png)
