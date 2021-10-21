@@ -239,6 +239,8 @@ Overall, the majority of stocks did not perform well in 2018. All except for “
 
 - What are the advantages or disadvantages of refactoring code?
 
+Refactoring code helps to improve the organization and readability of an original script. Looking at the code again and restructuring it can also help to find any missed errors, like duplicate or missing functions.  Additionally, refactoring may reveal any trends or patterns that may not have been obvious before. However, refactoring can also have its disadvantages. It can affect the testing outcomes if it is not restructured properly. What once may have been a logical structure can become confusing very quickly. It can also take a significant amount of time to restructure and ensure that the code still produces the expected outcomes. Overall, refactoring as a practice is a good idea, but it is heavily dependent on the data and its intended use. 
 
 - How do these pros and cons apply to refactoring the original VBA script?
 
+By refactoring the original VBA script, we were able to get faster run times for both the 2017 and 2018 data, as seen in the screenshots above. It made the stock analysis easier for the client, but a great deal of time was spent just to save a fraction of a second for the client. The question is how often Steve intends to analyze his stock data, which would likely be once a year when he gets new data to add. The frequency of Steve using the data needs to be weighed against the time it took to refactor the original script. 
