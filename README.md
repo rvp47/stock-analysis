@@ -221,13 +221,10 @@ Next i
 The rest of the code formats for readability, which was provided in the starter code as well.
 
 
-
-![VBA_Challenge_2017](https://user-images.githubusercontent.com/90656004/137662971-2bf4c4a5-598c-4845-8413-6166c4973371.png)
-
+![VBA_Challenge_2017](https://user-images.githubusercontent.com/90656004/138190312-661a2cc7-8374-464d-b900-bc5b4097d742.png)
 
 
-![VBA_Challenge_2018](https://user-images.githubusercontent.com/90656004/137663087-2b5f7ad7-95ec-43b3-8ef7-6534550c4f8e.png)
-
+![VBA_Challenge_2018](https://user-images.githubusercontent.com/90656004/138190316-a0769e5b-6bd0-455e-94c2-450cf4a11c0f.png)
 
 
 
