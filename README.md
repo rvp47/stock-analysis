@@ -218,14 +218,21 @@ Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
 Next i
 ```
 
-The rest of the code formats for readability, which was provided in the starter code as well.
+The rest of the code, provided in the starter code, formats for easier readability.
 
+After finalizing my code, I ran the stock analysis and confirmed that the outputs for 2017 and 2018 were the same as they were in this module. 
 
-![VBA_Challenge_2017](https://user-images.githubusercontent.com/90656004/138190312-661a2cc7-8374-464d-b900-bc5b4097d742.png)
+In 2017, nearly all of the stocks performed well. The return for every stock was a net positive, except for “TERP”. Some stocks reach returns between 100%-200%. All of the net positive returns are good investment opportunities for Steve and his parents. As for the code comparison, the execution time for the 2017 data using the original script was 1.383 seconds while the execution time for the 2017 data using the refactored code was 0.273 seconds.
 
+![2017 original script time](https://user-images.githubusercontent.com/90656004/138200273-d1d018e9-2368-4dd7-ac0a-02ac053c8ae6.PNG)
 
-![VBA_Challenge_2018](https://user-images.githubusercontent.com/90656004/138190316-a0769e5b-6bd0-455e-94c2-450cf4a11c0f.png)
+![VBA_Challenge_2017](https://user-images.githubusercontent.com/90656004/138200303-06f75245-edaa-4bad-ad00-75eb22cc32b2.png)
 
+Overall, the majority of stocks did not perform well in 2018. All except for “ENPH” and “RUN” resulted in net negative returns. The 2017 and 2018 data both showed that the stocks “ENPH” and “RUN” are great candidates for investment by Steve and his parents. By running both the original and refactored codes, the run times were as expected: the original script execution ran longer (1.375 seconds) than the refactored code (0.25 seconds). 
+	
+![2018 original script time](https://user-images.githubusercontent.com/90656004/138200285-e9fb8174-0654-4593-b00a-c5c3acef93d3.PNG)
+
+![VBA_Challenge_2018](https://user-images.githubusercontent.com/90656004/138200315-0c660740-938e-4be7-b45a-1151d1d9ea1c.png)
 
 
 ## Summary
