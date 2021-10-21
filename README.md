@@ -222,7 +222,7 @@ The rest of the code, provided in the starter code, formats for easier readabili
 
 After finalizing my code, I ran the stock analysis and confirmed that the outputs for 2017 and 2018 were the same as they were in this module. 
 
-In 2017, nearly all of the stocks performed well. The return for every stock was a net positive, except for “TERP”. Some stocks reach returns between 100%-200%. All of the net positive returns are good investment opportunities for Steve and his parents. As for the code comparison, the execution time for the 2017 data using the original script was 1.383 seconds while the execution time for the 2017 data using the refactored code was 0.273 seconds.
+In 2017, nearly all of the stocks performed well. The return for every stock was a net positive, except for “TERP”. Some stocks reach returns between 100%-200%. All of the net positive returns are good investment opportunities for Steve and his parents. As for the code comparison, the execution time for the 2017 data using the original script was 1.180 seconds while the execution time for the 2017 data using the refactored code was 0.234 seconds.
 
 ![2017 original script time](https://user-images.githubusercontent.com/90656004/138200273-d1d018e9-2368-4dd7-ac0a-02ac053c8ae6.PNG)
 
